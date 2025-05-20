@@ -16,18 +16,23 @@ void MainGame::run()
 	height = 600;
 	gameState = GameState::PLAY;
 	init();
+
+
 	sprites.push_back(new Sprite());
-	sprites.back()->init(-1, -1, 1, 1, "Images/lock.png");
+	sprites.back()->init(-1, -1, 1, 1, "Images/pikachu.png");
 	sprites.push_back(new Sprite());
-	sprites.back()->init(0, -1, 1, 1, "Images/lock.png");
-	//sprite.init(-1, -1, 1, 1,"Images/lock.png");
+	sprites.back()->init(0, -1, 1, 1, "Images/squirtle.png");
+	sprites.push_back(new Sprite());
+	sprites.back()->init(-1, 0, 1, 1, "Images/charmander.png");
+	sprites.push_back(new Sprite());
+	sprites.back()->init(0, 0, 1, 1, "Images/bulbasaur.png");
 	update();
 }
 
 void MainGame::init()
 {
 	SDL_Init(SDL_INIT_HAPTIC | SDL_INIT_CAMERA | SDL_INIT_EVENTS);
-	window = SDL_CreateWindow("Hola", witdh, height, SDL_WINDOW_OPENGL);
+	window = SDL_CreateWindow("Hey", witdh, height, SDL_WINDOW_OPENGL);
 
 	SDL_GLContext glContext = SDL_GL_CreateContext(window);
 	GLenum error = glewInit();
