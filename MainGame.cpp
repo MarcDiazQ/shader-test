@@ -19,13 +19,13 @@ void MainGame::run()
 
 
 	sprites.push_back(new Sprite());
-	sprites.back()->init(-1, -1, 1, 1, "Images/pikachu.png");
+	sprites.back()->init(-1, -1, 2, 1, "Images/pikachu.png");
+	//sprites.push_back(new Sprite());
+	//sprites.back()->init(0, -1, 1, 1, "Images/squirtle.png");
 	sprites.push_back(new Sprite());
-	sprites.back()->init(0, -1, 1, 1, "Images/squirtle.png");
-	sprites.push_back(new Sprite());
-	sprites.back()->init(-1, 0, 1, 1, "Images/charmander.png");
-	sprites.push_back(new Sprite());
-	sprites.back()->init(0, 0, 1, 1, "Images/bulbasaur.png");
+	sprites.back()->init(-1, 0, 2, 1, "Images/charmander.png");
+	//sprites.push_back(new Sprite());
+	//sprites.back()->init(0, 0, 1, 1, "Images/bulbasaur.png");
 	update();
 }
 
